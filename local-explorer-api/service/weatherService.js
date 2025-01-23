@@ -42,13 +42,11 @@ const weatherdata = {
 export const getWeatherForLocation = async (latitude, longitude) => {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${OPENWEATHER_API_KEY}`
 
-    // try {
-    //     const response = await fetch(url);
-    //     return await response.json();
-    // } catch (error) {
-    //     console.log(`Failed to get weather data: ${error}`);
-    //     throw error
-    // }
-
-    return weatherdata;
+    try {
+        const response = await fetch(url);
+        return await response.json();
+    } catch (error) {
+        console.log(`Failed to get weather data: ${error}`);
+        throw error
+    }
 }
