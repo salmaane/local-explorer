@@ -1,0 +1,22 @@
+{
+  "name": "local-explorer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "dev": "node --watch --env-file=.env server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "axios": "^1.7.9",
+    "cohere-ai": "^7.15.4",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
